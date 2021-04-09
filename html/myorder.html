@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>My Order</title>
+	<link rel="stylesheet" type="text/css" href="../css/style2.css">
+	<style type="text/css">ul{list-style:none} a {text-decoration: none}</style>
+</head>
+<body>
+	<div class="nav_bg">
+    <div class="wrap"> 
+        <ul id="nav" class="nav clearfix">
+            <li class="nLi" style="font-size: 30px;">
+                <h3 class="e"><a  href="#" style="font-size: 23px;">Are you hungry</a></h3>
+            </li>
+            <li class="nLi">
+              <h3 class="d"><a  href="index.html">Homepage</a></h3>
+            </li>
+            <li class="nLi">
+              <h3 class="d"><a href="myorder.html">My Order</a></h3>
+            </li>
+            <li class="nLi ">
+              <h3 class="d"><a href="order-statistic.html">orders-received statistics</a></h3>
+            </li>
+        </ul>
+    </div>
+   </div>
+
+   <div class="myorder">
+     <h1 class="m" style="color: #ff7575">My Order</h1>
+   </div>
+
+   <div class="order" style="display: none;">
+       <ul >
+           <li id="Double cooked pork slices" class="orderli">
+               <img src="../images/huiguorou.jpg" width="150" height="110" />
+               <span class="food">double cooked pork slices</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Taste heavy, by pork buttock, green pepper, suanmiao stir-fry</span>
+               <span class="price">18dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Green pepper corn">
+               <img src="../images/qingjiaoyumi.jpg" width="150" height="110" />
+               <span class="food">Green pepper corn</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">A light, fresh vegetarian home-cooked dish</span>
+               <span class="price">10dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Sichuan noodles with peppery sauce ">
+               <img src="../images/dandanmian.jpg" width="150" height="110" />
+               <span class="food">Sichuan noodles with peppery sauce</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Salty, fresh and slightly spicy, special pasta snacks, thin noodles, mellow marinate</span>
+               <span class="price">9dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Homemade meal with meat and vegetable">
+               <img src="../images/jiachang.jpg" width="150" height="110" />
+               <span class="food">Homemade meal with meat and vegetable</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Slightly spicy, carefully cooked with home-cooked dishes such as pork and cauliflower</span>
+               <span class="price">14dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Steamed fish head with diced hot red peppers">
+               <img src="../images/duojiaoyutou.jpg" width="150" height="110" />
+               <span class="food">steamed fish head with diced hot red peppers</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Spicy and made from fresh carp</span>
+               <span class="price">88dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Stewed pork stir-fry">
+               <img src="../images/hongshaochaocai.jpg" width="150" height="110" />
+               <span class="food">Stewed pork stir-fry</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Not spicy, cooked with braised pork in brown sauce and a special sauce</span>
+               <span class="price">15dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Shredded pork with garlic sauce">
+               <img src="../images/yuxiangrousi.jpg" width="150" height="110" />
+               <span class="food">shredded pork with garlic sauce</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Hot and sour, taste very good.</span>
+               <span class="price">18dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Characteristics of dumplings">
+               <img src="../images/shuijiao.jpg" width="150" height="110" />
+               <span class="food">Characteristics of dumplings</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Palate: Leek egg, pork and onion</span>
+               <span class="price">11dollar</span>
+               <button class="del">delete</button>
+           </li>
+           <li id="Twice-cooked pork stir-fry">
+               <img src="../images/huiguochaocai.jpg" width="150" height="110" />
+               <span class="food">Twice-cooked pork stir-fry</span>
+               <span class="num">Quantity: 1</span>
+               <span class="disc">Slightly spicy, twice-cooked pork and small rape</span>
+               <span class="price">13dollar</span>
+               <button class="del">delete</button>
+           </li>
+       </ul>
+   </div>
+
+  <div class="order_content" id="first">
+
+   </div>
+   <div class="b_add">
+       <a href="index.html"><button class="add">Add dishes</button></a>
+   </div>
+   <section class="my_model">
+    <p class="title">Delete dishes<span class="closeModel">X</span></p>
+    <p>Are you sure you want to delete this dish?</p>
+    <div class="opBtn">
+        <a href="javascript:;" class="dialog-sure">Confirm</a>
+        <a href="javascript:;" class="dialog-close">Close</a>
+    </div>
+   </section>  
+
+   <script type="text/javascript" src="../js/jQuery.js"></script>
+   <script type="text/javascript" src="../js/jquery.dialog.js"></script>
+   
+   <script type="text/javascript">
+     var db = openDatabase('dishes', '1.0', '点餐数据库', 30*1024*1024);
+     var datatable = document.getElementById("first");
+     var dishnames=new Array();
+
+     showAllData(datatable);
+     function showData(row,datatable,i) {
+        console.log(dishnames.indexOf(row.dishname));
+    if(dishnames.indexOf(row.dishname)!=-1)
+   {
+
+       console.log("repeated");
+   }
+    else{ dishnames.push(row.dishname)
+   
+    var ul=document.createElement("ul");
+    ul.className="order_lists";
+    var li1 = document.getElementById(row.dishname.replace(/(^\s+)|(\s+$)/g,""));
+    ul.appendChild(li1);
+    datatable.appendChild(ul);
+    console.log(datatable)
+    }
+    }
+    function showAllData(datatable) {
+    db.transaction(function(tx) {
+        tx.executeSql("CREATE TABLE IF NOT EXISTS Dingdan(picname TEXT,dishname TEXT,dishdisc TEXT,disprice TEXT,dishnum TEXT)", []);
+        tx.executeSql("SELECT * FROM Dingdan  ", [], function(tx, rs) {
+            
+            for(var i = 0; i < rs.rows.length; i++) {
+                showData(rs.rows.item(i),datatable,i)
+            }
+        })
+    })
+    }
+
+    var $order_lists = null;
+    var $order_content = '';
+    var namer;
+    
+    $('.del').click(function () {
+        $order_lists = $(this).parents('.order_lists');
+        $order_content = $order_lists.parents('.order_content');
+        namer= $(this).parents('.order_lists').find('.food').html();
+       // name=namer.split(">")[1].split("<")[0]
+        console.log(name.length)
+        
+        $('.model_bg').fadeIn(300);
+        $('.my_model').fadeIn(300);
+    });
+   
+
+    
+    $('.closeModel').click(function () {
+        closeM();
+    });
+    $('.dialog-close').click(function () {
+        closeM();
+    });
+    function closeM() {
+        $('.model_bg').fadeOut(300);
+        $('.my_model').fadeOut(300);
+    }
+    
+    $('.dialog-sure').click(function () {
+        $order_lists.remove();
+        if($order_content.html().trim() == null || $order_content.html().trim().length == 0){
+            //$.order_content.parents('.cartBox').remove();
+            $.sendMsg('The order book was empty!', 1000, function() {
+                console.log('sendMsg closed');
+            });
+        }
+        closeM();
+        //$sonCheckBox = $('.son_check');
+        //totalMoney();
+        var db = openDatabase('dishes', '1.0', '点餐数据库', 30*1024*1024);
+        Deletedish();
+        
+        function Deletedish(datatable) {
+            db.transaction(function(tx) {
+                tx.executeSql("CREATE TABLE IF NOT EXISTS Dingdan(picname TEXT,dishname TEXT,dishdisc TEXT,disprice TEXT,dishnum TEXT)", []);
+                tx.executeSql("DELETE FROM Dingdan WHERE dishname=(?)", [namer], function(tx, rs) {
+                    
+                   console.log("delete success!")
+                })
+            })
+        }
+    })
+   </script>
+</body>
+</html>
