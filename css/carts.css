@@ -31,7 +31,7 @@ label.mark{
     left:18%;
     top:7%;
 }
-/*购物车头部*/
+
 .cartMain_hd{
     width: 1000px;
     height: 50px;
@@ -98,7 +98,7 @@ label.mark{
 
 
 
-/*商品列表*/
+
 .cartBox .order_content{
     border: 1px solid #ccc;
 }
@@ -297,7 +297,7 @@ label.mark{
    
 }
 
-/*底部总计算价*/
+
 .bar-wrapper{
     width: 1008px;
     height: 50px;
@@ -365,7 +365,7 @@ label.mark{
     cursor: pointer;
 }
 
-/*自己定义的模态框*/
+
 .model_bg{
     position: absolute;
     top:0;
