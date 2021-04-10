@@ -4,6 +4,69 @@
     <title>Le Bistrot d'Andre</title>
     <link id="s" rel="stylesheet" href="style.css" />
   </head>
+  <script>
+    var money=0;
+    function add1(){
+      document.getElementById("field").value+="Crispy Fried Cauliflower ";
+      money +=4.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add2(){
+      document.getElementById("field").value+="Apple Delight ";
+      money +=3.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add3(){
+      document.getElementById("field").value+="Lone Olive ";
+      money +=1.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add4(){
+      document.getElementById("field").value+="Tomato and Onion Soup ";
+      money +=6.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add5(){
+      document.getElementById("field").value+="Grass Salad ";
+      money +=5.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add6(){
+      document.getElementById("field").value+="Mushroom yum-yum ";
+      money +=7.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add7(){
+      document.getElementById("field").value+="Bread Sandwich Inception ";
+      money +=13.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add8(){
+      document.getElementById("field").value+="Fractal Pizza ";
+      money +=15.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add9(){
+      document.getElementById("field").value+="BBQ Medley ";
+      money +=14.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add10(){
+      document.getElementById("field").value+="Chocolate Volcano ";
+      money +=6.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function add11(){
+      document.getElementById("field").value+="Gingerbread Me ";
+      money +=6.95;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+    function clearorder(){
+      document.getElementById("field").value = "";
+      money =0;
+      document.getElementById("haha_value").value=money.toFixed(2);
+    }
+  </script>
   <body>
     <header>
       <h1>Le Bistrot d'Andre</h1>
@@ -15,6 +78,7 @@
         <dl>
           <dt>Crispy Fried Cauliflower</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add1()">Order</button></span>
             <span class="price">4.95</span>
             <span class="details"
               >Beer-battered, breaded, and butter-fried and garnished with diced
@@ -23,6 +87,7 @@
           </dd>
           <dt>Apple Delight</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add2()">Order</button></span>
             <span class="price">3.95</span>
             <span class="details"
               >Fresh slices of Granny Smith apples lightly glazed with
@@ -31,6 +96,7 @@
           </dd>
           <dt>Lone Olive</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add3()">Order</button></span>
             <span class="price">1.95</span>
             <span class="details"
               >A single olive, starkly isolated against the blank expanse of a
@@ -45,6 +111,7 @@
         <dl>
           <dt>Tomato and Onion Soup</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add4()">Order</button></span>
             <span class="price">6.95</span>
             <span class="details"
               >Squashed, blended, salted and boiled to perfection</span
@@ -52,6 +119,7 @@
           </dd>
           <dt>Grass Salad</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add5()">Order</button></span>
             <span class="price">5.95</span>
             <span class="details"
               >Organic fescue and bluegrass and a light sprinkling of Bermuda
@@ -60,6 +128,7 @@
           </dd>
           <dt>Mushroom yum-yum</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add6()">Order</button></span>
             <span class="price">7.95</span>
             <span class="details"
               >Three varieties of fresh-picked, minimally toxic fungus</span
@@ -73,6 +142,7 @@
         <dl>
           <dt>Bread Sandwich Inception</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add7()">Order</button></span>
             <span class="price">13.95</span>
             <span class="details"
               >Two slices of rye between two slices of stone-ground wheat inside
@@ -81,6 +151,7 @@
           </dd>
           <dt>Fractal Pizza</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add8()">Order</button></span>
             <span class="price">15.95</span>
             <span class="details"
               >Our signature hand-tossed pizza never burns the roof of your
@@ -90,6 +161,7 @@
           </dd>
           <dt>BBQ Medley</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add9()">Order</button></span>
             <span class="price">14.95</span>
             <span class="details"
               >Our house specialty dry rub transforms this pulled fork into a
@@ -104,6 +176,7 @@
         <dl>
           <dt>Chocolate Volcano</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add10()">Order</button></span>
             <span class="price">6.95</span>
             <span class="details"
               >You know you want it, it is really quite magnificently
@@ -112,6 +185,7 @@
           </dd>
           <dt>Gingerbread Me</dt>
           <dd>
+            <span class="or"><button type="button" onclick="add11()">Order</button></span>
             <span class="price">6.95</span>
             <span class="details"
               >One of a kind gingerbread homunculus custom-made in your own
@@ -123,6 +197,12 @@
     </main>
 
     <footer>
+      <h3>Your order:</h3>
+      <textarea type='text' id='field' style="width: 1000px;height:100px;">
+      </textarea>
+      <span ><button type="button" onclick="clearorder()">Clear</button></span>
+      Sum:
+      <input id="haha_value" value="0">
       <address>
         XXXXXXX northern Sydney.
         <br />

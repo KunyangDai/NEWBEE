@@ -44,7 +44,16 @@ dd {
   padding-left: 10px;
 }
 
+.or{
+  order: 3;
+  padding-left: 10px;
+}
+
 /* Draw a 2px dashed rosybrown border around the address/footer */
 address {
-  padding: 10px;
+  padding-top: 100px;
+}
+
+footer{
+  padding-top: 50px;
 }
